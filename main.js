@@ -10,7 +10,7 @@ function showNotes(list) {
   grid.innerHTML = "";
 
   let notesCount = document.getElementById("notesCount");
-  notesCount.textContent = "You have " + (notes.length===1 ? " note" : " notes");
+  notesCount.textContent = "You have " + notes.length + (notes.length===1 ? " note" : " notes");
 
   if (list.length === 0) {
     grid.innerHTML = "<p class='col-span-3 text-center text-gray-500 text-sm py-5'>No notes yet!</p>";
