@@ -1,5 +1,5 @@
 
-let notes = JSON.parse(localStorage.getItem("notes"));
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
 function saveNotes() {
   localStorage.setItem("notes", JSON.stringify(notes));
