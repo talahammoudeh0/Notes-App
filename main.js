@@ -9,8 +9,11 @@ function showNotes(list) {
   let grid = document.getElementById("notesList");
   grid.innerHTML = "";
 
+  let notesCount = document.getElementById("notesCount");
+  notesCount.textContent = "You have " + notes.length + " notes";
+
   if (list.length === 0) {
-    grid.innerHTML = "<p class='col-span-3 text-center text-gray-400 text-sm py-5'>No notes yet!</p>";
+    grid.innerHTML = "<p class='col-span-3 text-center text-gray-500 text-sm py-5'>No notes yet!</p>";
     return;
   }
 
@@ -133,5 +136,13 @@ document.getElementById("searchInput").addEventListener("input", function() {
   });
   showNotes(filtered);
 });
+
+document.getElementById("deleteAllBtn").addEventListener("click", function() {
+  notes = [];
+  saveNotes();
+  showNotes(notes);
+});
+
+showNotes(notes);
 
 showNotes(notes);

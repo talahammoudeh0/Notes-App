@@ -25,7 +25,7 @@
   <div class="max-w-3xl mx-auto mt-8 px-4">
 
     <h1 class="text-center text-2xl font-bold mb-6 text-black">
-      Simple Notes App using JavaScript
+      Simple Notes App
     </h1>
 
     <div class="bg-white rounded-md p-5 mb-8 border hover:border-3 hover:border-gray-700">
@@ -47,7 +47,13 @@
       </div>
     </div>
 
-    <h2 class="text-center text-xl font-bold mb-4 text-black">Notes List</h2>
+    <div class="flex justify-between items-center mb-4">
+  <h2 class="text-center text-2xl font-bold text-black">Notes List :</h2>
+  <span id="notesCount" class="text-sm text-black"></span>
+  <button id="deleteAllBtn" class="bg-red-700 hover:bg-red-800 text-white text-sm px-4 py-1 rounded cursor-pointer">
+    Delete All
+  </button>
+</div>
     <div id="notesList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
 
   </div>
